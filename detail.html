@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detail Produk — Deku & Co</title>
+<link rel="icon" href="images/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <div class="brand-mark">D&C</div>
+      <div class="brand-text">
+        <h1>Deku &amp; Co</h1>
+        <p>Setiap langkah punya cerita</p>
+      </div>
+    </div>
+    <div class="header-utility">
+      <a href="transaksi.html">🛒 Keranjang</a>
+    </div>
+  </div>
+  <a href="index.html" class="banner-link" aria-label="Ke halaman katalog">
+    <img src="images/Deku-Co.png" alt="Banner promo Deku & Co">
+  </a>
+</header>
+
+<div class="marquee-bar">
+  <marquee behavior="scroll" direction="left" scrollamount="5">
+    GRATIS ONGKIR se-Jawa Barat &nbsp;•&nbsp; DISKON 20% untuk pembelian ke-2 &nbsp;•&nbsp; KOLEKSI TERBARU sudah tersedia &nbsp;•&nbsp; Garansi jahitan 30 hari &nbsp;•&nbsp;
+  </marquee>
+</div>
+
+<nav class="site-menu">
+  <ul>
+    <li><a href="index.html">Katalog</a></li>
+    <li><a href="transaksi.html">Transaksi</a></li>
+    <li><a href="invoice.html">Invoice</a></li>
+    <li><a href="kontak.html">Kontak Kami</a></li>
+    <li><a href="tentang.html">Tentang Perusahaan</a></li>
+  </ul>
+</nav>
+
+<div class="page-grid">
+
+  <aside class="sidebar" aria-label="Kategori produk">
+    <h3>Kategori</h3>
+    <ul>
+      <li><a href="index.html">Semua Produk</a></li>
+      <li><a href="index.html">Sneakers</a></li>
+      <li><a href="index.html">Boots</a></li>
+      <li><a href="index.html">Formal</a></li>
+      <li><a href="index.html">Sandal</a></li>
+      <li><a href="index.html">Olahraga</a></li>
+    </ul>
+  </aside>
+
+  <main class="content">
+    <div class="page-title">
+      <span class="eyebrow">Detail Produk</span>
+      <h2>Rincian Produk</h2>
+      <p>Cek spesifikasi lengkap, pilih ukuran yang pas, lalu lanjutkan ke pembayaran.</p>
+    </div>
+
+    <div id="detailWrap" class="detail-layout">
+      <div class="detail-image">
+        <img id="detailImg" src="" alt="">
+      </div>
+      <div class="detail-info">
+        <h2 id="detailName"></h2>
+        <p class="price" id="detailPrice"></p>
+
+        <h5>Deskripsi Produk</h5>
+        <p id="detailDesc"></p>
+
+        <h5>Spesifikasi</h5>
+        <ul id="detailSpecs"></ul>
+
+        <div class="size-picker">
+          <span class="label">Pilih Ukuran (EU)</span>
+          <div class="size-options" id="sizeOptions"></div>
+          <p class="form-msg" id="sizeMsg"></p>
+        </div>
+
+        <div class="qty-row">
+          <span class="label" style="margin:0;">Jumlah:</span>
+          <button type="button" id="qtyMinus" aria-label="Kurangi jumlah">−</button>
+          <input type="number" id="qtyInput" value="1" min="1" max="10" readonly>
+          <button type="button" id="qtyPlus" aria-label="Tambah jumlah">+</button>
+        </div>
+
+        <button type="button" id="goCheckout" class="btn btn-primary">Lanjut ke Pembayaran</button>
+      </div>
+    </div>
+  </main>
+
+  <aside class="sidebar" aria-label="Informasi tambahan">
+    <div class="sidebar-block promo-card">
+      <span class="eyebrow">Tips Ukuran</span>
+      <p>Ragu pilih ukuran? Chat kami di WhatsApp untuk panduan fitting.</p>
+    </div>
+    <div class="sidebar-block sidebar contact-mini">
+      <h3>Pengiriman</h3>
+      <p><strong>Estimasi:</strong> 2–4 hari kerja</p>
+      <p><strong>Retur:</strong> 7 hari jika tidak sesuai ukuran</p>
+    </div>
+  </aside>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <h5>Deku &amp; Co</h5>
+      <p>Toko sepatu dan sandal dengan kualitas bahan pilihan dan pelayanan yang ramah.</p>
+    </div>
+    <div>
+      <h5>Navigasi</h5>
+      <ul>
+        <li><a href="index.html">Katalog</a></li>
+        <li><a href="kontak.html">Kontak Kami</a></li>
+        <li><a href="tentang.html">Tentang Kami</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Ikuti Kami</h5>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">TikTok Shop</a></li>
+        <li><a href="#">WhatsApp Business</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Deku &amp; Co — Tugas UAS Komputer Aplikasi Teknologi Informasi</div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

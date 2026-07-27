@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invoice — Deku & Co</title>
+<link rel="icon" href="images/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <div class="brand-mark">D&C</div>
+      <div class="brand-text">
+        <h1>Deku &amp; Co</h1>
+        <p>Setiap langkah punya cerita</p>
+      </div>
+    </div>
+    <div class="header-utility">
+      <a href="transaksi.html">🛒 Keranjang</a>
+    </div>
+  </div>
+  <a href="index.html" class="banner-link" aria-label="Ke halaman katalog">
+    <img src="images/Deku-Co.png" alt="Banner promo Deku & Co">
+  </a>
+</header>
+
+<div class="marquee-bar">
+  <marquee behavior="scroll" direction="left" scrollamount="5">
+    Terima kasih sudah berbelanja di Deku &amp; Co &nbsp;•&nbsp; Simpan invoice ini sebagai bukti pembayaran &nbsp;•&nbsp;
+  </marquee>
+</div>
+
+<nav class="site-menu">
+  <ul>
+    <li><a href="index.html">Katalog</a></li>
+    <li><a href="transaksi.html">Transaksi</a></li>
+    <li><a href="invoice.html">Invoice</a></li>
+    <li><a href="kontak.html">Kontak Kami</a></li>
+    <li><a href="tentang.html">Tentang Perusahaan</a></li>
+  </ul>
+</nav>
+
+<div class="page-grid">
+
+  <aside class="sidebar" aria-label="Informasi">
+    <h3>Status Pesanan</h3>
+    <p style="font-size:0.85rem; color: var(--ink-soft); padding: 0 8px;">Pesanan diterima dan sedang diproses oleh tim kami.</p>
+  </aside>
+
+  <main class="content">
+    <div class="page-title">
+      <span class="eyebrow">Invoice</span>
+      <h2>Struk Pembelian</h2>
+      <p>Berikut rincian transaksi kamu. Simpan halaman ini sebagai bukti pemesanan.</p>
+    </div>
+
+    <div id="invoiceBox" class="invoice-box">
+      <div class="invoice-head">
+        <div>
+          <h2>Deku &amp; Co</h2>
+          <p style="font-size:0.85rem; color:var(--ink-soft); margin:4px 0 0;">Jl. Sepatu Raya No. 12, Bandung</p>
+        </div>
+        <div class="stamp">LUNAS</div>
+      </div>
+
+      <div class="invoice-meta">
+        <div>
+          <p><strong>No. Invoice:</strong> <span id="invNumber"></span></p>
+          <p><strong>Tanggal:</strong> <span id="invDate"></span></p>
+          <p><strong>Pembayaran:</strong> <span id="invPayment"></span></p>
+        </div>
+        <div>
+          <p><strong>Nama:</strong> <span id="invCustName"></span></p>
+          <p><strong>Telepon:</strong> <span id="invCustPhone"></span></p>
+          <p><strong>Email:</strong> <span id="invCustEmail"></span></p>
+          <p><strong>Alamat:</strong> <span id="invCustAddress"></span></p>
+        </div>
+      </div>
+
+      <table class="invoice-table">
+        <thead>
+          <tr><th>Produk</th><th>Qty</th><th>Harga</th><th>Subtotal</th></tr>
+        </thead>
+        <tbody id="invTableBody"></tbody>
+      </table>
+
+      <div class="invoice-totals">
+        <table>
+          <tr><td>Subtotal</td><td class="num" id="invSubtotal"></td></tr>
+          <tr><td>Ongkos Kirim</td><td class="num" id="invOngkir"></td></tr>
+          <tr class="grand"><td>Total</td><td class="num" id="invTotal"></td></tr>
+        </table>
+      </div>
+
+      <p class="invoice-footer-note">Terima kasih telah berbelanja di Deku &amp; Co. Simpan invoice ini sampai barang diterima.</p>
+
+      <div class="invoice-actions">
+        <button class="btn btn-outline" onclick="window.print()">Cetak Invoice</button>
+        <a class="btn btn-primary" href="index.html">Kembali Belanja</a>
+      </div>
+    </div>
+  </main>
+
+  <aside class="sidebar" aria-label="Bantuan">
+    <div class="sidebar-block promo-card">
+      <span class="eyebrow">Lacak Pesanan</span>
+      <p>Update pengiriman akan dikirim via WhatsApp.</p>
+    </div>
+  </aside>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <h5>Deku &amp; Co</h5>
+      <p>Toko sepatu dan sandal dengan kualitas bahan pilihan dan pelayanan yang ramah.</p>
+    </div>
+    <div>
+      <h5>Navigasi</h5>
+      <ul>
+        <li><a href="index.html">Katalog</a></li>
+        <li><a href="kontak.html">Kontak Kami</a></li>
+        <li><a href="tentang.html">Tentang Perusahaan</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Ikuti Kami</h5>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">TikTok Shop</a></li>
+        <li><a href="#">WhatsApp Business</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Deku &amp; Co — Tugas UAS Komputer Aplikasi Teknologi Informasi</div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

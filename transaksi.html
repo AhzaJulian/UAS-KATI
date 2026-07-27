@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transaksi — Deku & Co</title>
+<link rel="icon" href="images/favicon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <div class="brand-mark">D&C</div>
+      <div class="brand-text">
+        <h1>Deku &amp; Co</h1>
+        <p>Setiap langkah punya cerita</p>
+      </div>
+    </div>
+    <div class="header-utility">
+      <a href="transaksi.html">🛒 Keranjang</a>
+    </div>
+  </div>
+  <a href="index.html" class="banner-link" aria-label="Ke halaman katalog">
+    <img src="images/Deku-Co.png" alt="Banner promo Deku & Co">
+  </a>
+</header>
+
+<div class="marquee-bar">
+  <marquee behavior="scroll" direction="left" scrollamount="5">
+    GRATIS ONGKIR se-Jawa Barat &nbsp;•&nbsp; DISKON 20% untuk pembelian ke-2 &nbsp;•&nbsp; KOLEKSI TERBARU sudah tersedia &nbsp;•&nbsp; Garansi jahitan 30 hari &nbsp;•&nbsp;
+  </marquee>
+</div>
+
+<nav class="site-menu">
+  <ul>
+    <li><a href="index.html">Katalog</a></li>
+    <li><a href="transaksi.html">Transaksi</a></li>
+    <li><a href="invoice.html">Invoice</a></li>
+    <li><a href="kontak.html">Kontak Kami</a></li>
+    <li><a href="tentang.html">Tentang Perusahaan</a></li>
+  </ul>
+</nav>
+
+<div class="page-grid">
+
+  <aside class="sidebar" aria-label="Bantuan transaksi">
+    <h3>Langkah Transaksi</h3>
+    <ul>
+      <li style="padding:7px 8px; font-size:0.85rem; color:var(--ink-soft);">1. Pilih produk &amp; ukuran</li>
+      <li style="padding:7px 8px; font-size:0.85rem; color:var(--ink-soft);">2. Isi data pemesan</li>
+      <li style="padding:7px 8px; font-size:0.85rem; color:var(--ink-soft);">3. Pilih pembayaran</li>
+      <li style="padding:7px 8px; font-size:0.85rem; color:var(--ink-soft);">4. Terima invoice</li>
+    </ul>
+  </aside>
+
+  <main class="content">
+    <div class="page-title">
+      <span class="eyebrow">Transaksi</span>
+      <h2>Form Pemesanan</h2>
+      <p>Lengkapi data di bawah ini untuk menyelesaikan pesananmu.</p>
+    </div>
+
+    <div id="orderSummary" class="order-summary"></div>
+
+    <form id="transaksiForm" class="form-card" novalidate>
+
+      <div class="form-section">
+        <h4>Data Pemesan</h4>
+        <div class="form-grid">
+          <div class="field">
+            <label for="custName">Nama Lengkap</label>
+            <input type="text" id="custName" name="custName" placeholder="Nama sesuai KTP">
+            <span class="error-text" id="custNameError"></span>
+          </div>
+          <div class="field">
+            <label for="custPhone">Nomor WhatsApp</label>
+            <input type="tel" id="custPhone" name="custPhone" placeholder="08xxxxxxxxxx">
+            <span class="error-text" id="custPhoneError"></span>
+          </div>
+          <div class="field">
+            <label for="custEmail">Email</label>
+            <input type="email" id="custEmail" name="custEmail" placeholder="nama@email.com">
+            <span class="error-text" id="custEmailError"></span>
+          </div>
+          <div class="field">
+            <label for="custCity">Kota</label>
+            <select id="custCity" name="custCity">
+              <option value="Bandung">Bandung</option>
+              <option value="Jakarta">Jakarta</option>
+              <option value="Surabaya">Surabaya</option>
+              <option value="Yogyakarta">Yogyakarta</option>
+              <option value="Lainnya">Lainnya</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="custAddress">Alamat Lengkap Pengiriman</label>
+            <textarea id="custAddress" name="custAddress" placeholder="Nama jalan, nomor rumah, RT/RW, kecamatan"></textarea>
+            <span class="error-text" id="custAddressError"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <h4>Metode Pembayaran</h4>
+        <div class="pay-options">
+          <label class="pay-option">
+            <input type="radio" name="payment" value="Transfer Bank">
+            Transfer Bank
+          </label>
+          <label class="pay-option">
+            <input type="radio" name="payment" value="E-Wallet (OVO/DANA/GoPay)">
+            E-Wallet
+          </label>
+          <label class="pay-option">
+            <input type="radio" name="payment" value="COD (Bayar di Tempat)">
+            COD
+          </label>
+        </div>
+        <span class="error-text" id="paymentError"></span>
+      </div>
+
+      <div class="form-section">
+        <h4>Catatan Tambahan</h4>
+        <div class="field full">
+          <label for="custNote">Catatan untuk penjual <span class="hint">(opsional)</span></label>
+          <textarea id="custNote" name="custNote" placeholder="Contoh: titip di satpam, dsb."></textarea>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary" style="margin-top:20px;">Buat Pesanan &amp; Lihat Invoice</button>
+    </form>
+  </main>
+
+  <aside class="sidebar" aria-label="Info pembayaran">
+    <div class="sidebar-block promo-card">
+      <span class="eyebrow">Aman</span>
+      <p>Semua metode pembayaran kami sudah terverifikasi.</p>
+    </div>
+    <div class="sidebar-block sidebar contact-mini">
+      <h3>Butuh Bantuan?</h3>
+      <p><strong>BUKA:</strong> SETIAP HARI</p>
+      <p><strong>Jam Layanan:</strong> 09.00–20.00</p>
+    </div>
+  </aside>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <h5>Deku &amp; Co</h5>
+      <p>Toko sepatu dan sandal dengan kualitas bahan pilihan dan pelayanan yang ramah.</p>
+    </div>
+    <div>
+      <h5>Navigasi</h5>
+      <ul>
+        <li><a href="index.html">Katalog</a></li>
+        <li><a href="kontak.html">Kontak Kami</a></li>
+        <li><a href="tentang.html">Tentang Perusahaan</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>Ikuti Kami</h5>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">TikTok Shop</a></li>
+        <li><a href="#">WhatsApp Business</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 Deku &amp; Co — Tugas UAS Komputer Aplikasi Teknologi Informasi</div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
